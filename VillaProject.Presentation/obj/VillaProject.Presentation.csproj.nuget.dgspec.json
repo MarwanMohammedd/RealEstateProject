@@ -4,14 +4,14 @@
     "F:\\VillaProject\\VillaProject.Presentation\\VillaProject.Presentation.csproj": {}
   },
   "projects": {
-    "F:\\VillaProject\\VillaProject.Presentation\\VillaProject.Presentation.csproj": {
+    "F:\\VillaProject\\VillaProject.Infrastructure\\VillaProject.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\VillaProject\\VillaProject.Presentation\\VillaProject.Presentation.csproj",
-        "projectName": "VillaProject.Presentation",
-        "projectPath": "F:\\VillaProject\\VillaProject.Presentation\\VillaProject.Presentation.csproj",
+        "projectUniqueName": "F:\\VillaProject\\VillaProject.Infrastructure\\VillaProject.Infrastructure.csproj",
+        "projectName": "VillaProject.Infrastructure",
+        "projectPath": "F:\\VillaProject\\VillaProject.Infrastructure\\VillaProject.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Marwan Rabie\\.nuget\\packages\\",
-        "outputPath": "F:\\VillaProject\\VillaProject.Presentation\\obj\\",
+        "outputPath": "F:\\VillaProject\\VillaProject.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Marwan Rabie\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,83 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "microsoft.entityframeworkcore.sqlserver": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "microsoft.entityframeworkcore.tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\VillaProject\\VillaProject.Presentation\\VillaProject.Presentation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\VillaProject\\VillaProject.Presentation\\VillaProject.Presentation.csproj",
+        "projectName": "VillaProject.Presentation",
+        "projectPath": "F:\\VillaProject\\VillaProject.Presentation\\VillaProject.Presentation.csproj",
+        "packagesPath": "C:\\Users\\Marwan Rabie\\.nuget\\packages\\",
+        "outputPath": "F:\\VillaProject\\VillaProject.Presentation\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Marwan Rabie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "F:\\VillaProject\\VillaProject.Infrastructure\\VillaProject.Infrastructure.csproj": {
+                "projectPath": "F:\\VillaProject\\VillaProject.Infrastructure\\VillaProject.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "microsoft.entityframeworkcore": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
