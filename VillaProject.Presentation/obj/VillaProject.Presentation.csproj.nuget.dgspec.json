@@ -4,6 +4,61 @@
     "F:\\VillaProject\\VillaProject.Presentation\\VillaProject.Presentation.csproj": {}
   },
   "projects": {
+    "F:\\VillaProject\\VillaProject.Domain\\VillaProject.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\VillaProject\\VillaProject.Domain\\VillaProject.Domain.csproj",
+        "projectName": "VillaProject.Domain",
+        "projectPath": "F:\\VillaProject\\VillaProject.Domain\\VillaProject.Domain.csproj",
+        "packagesPath": "C:\\Users\\Marwan Rabie\\.nuget\\packages\\",
+        "outputPath": "F:\\VillaProject\\VillaProject.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Marwan Rabie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "F:\\VillaProject\\VillaProject.Infrastructure\\VillaProject.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +82,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\VillaProject\\VillaProject.Domain\\VillaProject.Domain.csproj": {
+                "projectPath": "F:\\VillaProject\\VillaProject.Domain\\VillaProject.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -112,6 +171,12 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "microsoft.entityframeworkcore": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "microsoft.entityframeworkcore.design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.5, )"
             }

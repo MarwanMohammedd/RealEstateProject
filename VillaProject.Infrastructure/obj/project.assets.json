@@ -1502,6 +1502,16 @@
             "rid": "win"
           }
         }
+      },
+      "VillaProject.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/VillaProject.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VillaProject.Domain.dll": {}
+        }
       }
     }
   },
@@ -4096,10 +4106,16 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "VillaProject.Domain/1.0.0": {
+      "type": "project",
+      "path": "../VillaProject.Domain/VillaProject.Domain.csproj",
+      "msbuildProject": "../VillaProject.Domain/VillaProject.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "VillaProject.Domain >= 1.0.0",
       "microsoft.entityframeworkcore.sqlserver >= 8.0.5",
       "microsoft.entityframeworkcore.tools >= 8.0.5"
     ]
@@ -4130,7 +4146,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\VillaProject\\VillaProject.Domain\\VillaProject.Domain.csproj": {
+              "projectPath": "F:\\VillaProject\\VillaProject.Domain\\VillaProject.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

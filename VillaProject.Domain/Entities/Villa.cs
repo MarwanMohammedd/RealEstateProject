@@ -11,7 +11,7 @@ public class Villa
     [StringLength(250)]
     public string? Description { get; set; }
     [Column(TypeName = "money")]
-    public double Price { get; set; }
+    public decimal Price { get; set; }
     public int Occupancy { get; set; }
     public string? ImageUrl { get; set; }
     public DateTime? CreatedDate { get; set; }

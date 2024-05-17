@@ -1,0 +1,12 @@
+F:\VillaProject\VillaProject.Domain\bin\Debug\net8.0\VillaProject.Domain.deps.json
+F:\VillaProject\VillaProject.Domain\bin\Debug\net8.0\VillaProject.Domain.dll
+F:\VillaProject\VillaProject.Domain\bin\Debug\net8.0\VillaProject.Domain.pdb
+F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.AssemblyInfoInputs.cache
+F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.AssemblyInfo.cs
+F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.csproj.CoreCompileInputs.cache
+F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.sourcelink.json
+F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.dll
+F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\refint\VillaProject.Domain.dll
+F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.pdb
+F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\ref\VillaProject.Domain.dll
