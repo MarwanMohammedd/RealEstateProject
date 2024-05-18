@@ -1,7 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class Villa
+namespace VillaProject.Domain.Entities
+{
+ public class Villa
 {
     [Key]
     public int ID { get; set; }
@@ -16,4 +18,5 @@ public class Villa
     public string? ImageUrl { get; set; }
     public DateTime? CreatedDate { get; set; }
     public DateTime? UpdatedDate { get; set; }
+}   
 }

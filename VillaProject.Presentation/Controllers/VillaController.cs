@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using VillaProject.Domain.Entities;
 /// <summary>
 /// Controller for Villa Entity.
 /// </summary>

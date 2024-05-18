@@ -1,5 +1,6 @@
 using System.Data;
 using Microsoft.EntityFrameworkCore;
+using VillaProject.Domain.Entities;
 
 public class ApplicationDBContext : DbContext
 {
