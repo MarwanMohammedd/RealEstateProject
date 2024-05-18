@@ -1,22 +1,31 @@
 @model IEnumerable<VillaProject.Domain.Entities.Villa>
 
-<table class = "table">
-    <thead>
-        <tr>
-            <th>VillaName</th>
-            <th>Price</th>
-            <th>Description</th>
-            <th>Occupancy</th>
-        </tr>
-    </thead>
-    <tbody> 
-        @foreach(var value in Model){
+<div class="w-100 card border-0 p-4">
+    <h1>Villa</h1>
+</div>
+
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
             <tr>
-                <td>@value.VillaName</td>
-                <td>@value.Price</td>
-                <td>@value.Description</td>
-                <td>@value.Occupancy</td>
+                <th>VillaName</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Occupancy</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var value in Model)
+            {
+                <tr>
+                    <td>@value.VillaName</td>
+                    <td>@value.Price</td>
+                    <td>@value.Description</td>
+                    <td>@value.Occupancy</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <!-- For Refare to Villa Controller and Asp Action-->
+    <a asp-controller="Villa" asp-action="Create" class="btn btn-secondary">Create New Villa </a>
+</div>
