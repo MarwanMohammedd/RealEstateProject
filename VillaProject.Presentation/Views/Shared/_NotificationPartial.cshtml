@@ -1,0 +1,8 @@
+<div class = "h-100 d-flex align-items-center justify-content-center">
+    @if(@TempData["error"] is not null){
+        <p class="text-danger"> @TempData["error"]</p>
+    }
+    @if(@TempData["success"] is not null){
+        <p class="text-success"> @TempData["success"]</p>
+    }
+</div>

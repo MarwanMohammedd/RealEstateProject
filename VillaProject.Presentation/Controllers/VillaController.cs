@@ -41,6 +41,7 @@ public class VillaController : Controller
             _logger.LogInformation("InSide Create Action Method : Create New Villa Entity");
             _applicationDBContext.Villas.Add(villa);
             _applicationDBContext.SaveChanges();
+            TempData["success"] = "Entity Has Been Created Successfully";
             return RedirectToAction("Index");
         }
         return View();
@@ -52,6 +53,7 @@ public class VillaController : Controller
         var result = _applicationDBContext.Villas.Find(ID);
         if (result is null)
         {
+            TempData["error"] = "Entity Has Not Been Updated Successfully";
             return NotFound("CaptureUnExpected");
         }
         return View(result);
@@ -65,6 +67,7 @@ public class VillaController : Controller
         {
             _applicationDBContext.Villas.Add(villa);
             _applicationDBContext.SaveChanges();
+             TempData["success"] = "Entity Has Been Updated Successfully";
             return RedirectToAction("Index");
         }
         return View();
@@ -76,6 +79,7 @@ public class VillaController : Controller
         if (result is null)
         {
             _logger.LogInformation("InSide Delete Action Method : ID Not Exist");
+            TempData["error"] = "Entity Has Not Been Deleted Successfully";
             return View("CaptureUnExpected");
         }
         return View(result);
@@ -90,6 +94,7 @@ public class VillaController : Controller
             _logger.LogInformation("InSide Delete Action Method : Entity Has Been Deleted!");
             _applicationDBContext.Villas.Remove(result);
             _applicationDBContext.SaveChanges();
+             TempData["success"] = "Entity Has Been Deleted Successfully";
             return RedirectToAction("Index");
         }
         return View();
