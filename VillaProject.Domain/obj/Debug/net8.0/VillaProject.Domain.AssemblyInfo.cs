@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VillaProject.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a34c1a7efac3c1125f6c4011a06ecd293f62778")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cf57f48e293b962fe13e0be767026aac943b0ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("VillaProject.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VillaProject.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
