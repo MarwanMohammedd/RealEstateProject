@@ -1,46 +1,42 @@
 @model VillaProject.Domain.Entities.Villa
 
 <div>
-    <h1>Create New Villa</h1>
+    <h1>Update Villa</h1>
 </div>
 <div>
     <form method="post" class="row">
+        <input asp-for="ID" hidden />
         <div class="p-3">
             <div class="form-floating py-1 col-12">
-                <input asp-for="VillaName" class="form-control border shadow" />
+                <input asp-for="VillaName" disabled="disabled" class="form-control border shadow" />
                 <label asp-for="VillaName" class="ms-2 text-dark"></label>
-                <span asp-validation-for="VillaName" class="text-danger"></span>
             </div>
 
             <div class="form-floating py-1 col-12">
-                <input asp-for="Description" class="form-control border shadow" />
+                <input asp-for="Description"  disabled="disabled" class="form-control border shadow" />
                 <label asp-for="Description" class="ms-2 text-dark"></label>
-                <span asp-validation-for="Description" class="text-danger"></span>
             </div>
 
 
             <div class="form-floating py-1 col-12">
-                <input asp-for="Price" class="form-control border shadow" />
+                <input asp-for="Price" disabled="disabled" class="form-control border shadow" />
                 <label asp-for="Price" class="ms-2 text-dark"></label>
-                <span asp-validation-for="Price" class="text-danger"></span>
             </div>
 
 
             <div class="form-floating py-1 col-12">
-                <input asp-for="Occupancy" class="form-control border shadow" />
+                <input asp-for="Occupancy" disabled="disabled" class="form-control border shadow" />
                 <label asp-for="Occupancy" class="ms-2 text-dark"></label>
-                <span asp-validation-for="Occupancy" class="text-danger"></span>
             </div>
 
             <div class="form-floating py-1 col-12">
-                <input asp-for="ImageUrl" class="form-control border shadow " />
+                <input asp-for="ImageUrl" disabled="disabled" class="form-control border shadow " />
                 <label asp-for="ImageUrl" class="ms-2 text-dark"></label>
-                <span asp-validation-for="ImageUrl" class="text-danger"></span>
             </div>
 
             <div class="row pt-2">
                 <div class="col-6 col-md-3">
-                    <button type="submit" class="btn btn-success w-100">Create</button>
+                    <button type="submit" class="btn btn-danger w-100">Delete</button>
                 </div>
                 <div class="col-6 col-md-3">
                     <a asp-controller="Home" asp-action="Index" class="btn btn-secondary w-100">Cancel</a>
