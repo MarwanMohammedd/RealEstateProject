@@ -1,11 +1,10 @@
 @model Villa
 
 <div>
-    <h1>Update Villa</h1>
+    <h1>Create New Villa</h1>
 </div>
 <div>
     <form method="post" class="row">
-        <input asp-for="ID" hidden />
         <div class="p-3">
             <div class="form-floating py-1 col-12">
                 <input asp-for="VillaName" class="form-control border shadow" />
@@ -41,7 +40,7 @@
 
             <div class="row pt-2">
                 <div class="col-6 col-md-3">
-                    <button type="submit" class="btn btn-success w-100">Update</button>
+                    <button type="submit" class="btn btn-success w-100">Create</button>
                 </div>
                 <div class="col-6 col-md-3">
                     <a asp-controller="Home" asp-action="Index" class="btn btn-secondary w-100">Cancel</a>

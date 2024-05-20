@@ -1,0 +1,46 @@
+@model VillaNumber
+
+<div class = "h-100 d-flex align-items-center justify-content-center">
+    <h1>Update Villa Number</h1>
+</div>
+
+<div>
+    <form method="post" class="row">
+        <input asp-for="VillaNumberID" hidden />
+        <div class="p-3">
+            <div class="form-floating py-1 col-12">
+                <input asp-for="VillaID" class="form-control border shadow" />
+                <label asp-for="VillaID" class="ms-2 text-dark"></label>
+                <span asp-validation-for="VillaID" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating py-1 col-12">
+                <input asp-for="VillaNumberID" class="form-control border shadow" />
+                <label asp-for="VillaNumberID" class="ms-2 text-dark"></label>
+                <span asp-validation-for="VillaNumberID" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-floating py-1 col-12">
+                <input asp-for="MoreInformation" class="form-control border shadow" />
+                <label asp-for="MoreInformation" class="ms-2 text-dark"></label>
+                <span asp-validation-for="MoreInformation" class="text-danger"></span>
+            </div>
+
+            <div class="row pt-2">
+                <div class="col-6 col-md-3">
+                    <button type="submit" class="btn btn-success w-100">Update</button>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a asp-controller="VillaNumber" asp-action="Index" class="btn btn-secondary w-100">Cancel</a>
+                </div>
+            </div>
+    </form>
+</div>
+
+<!--Client-Side Validation-->
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

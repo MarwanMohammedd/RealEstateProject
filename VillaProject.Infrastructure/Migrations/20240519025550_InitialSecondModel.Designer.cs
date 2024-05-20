@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace VillaProject.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20240517222202_InitSecondUpdate")]
-    partial class InitSecondUpdate
+    [Migration("20240519025550_InitialSecondModel")]
+    partial class InitialSecondModel
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace VillaProject.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Villa", b =>
+            modelBuilder.Entity("VillaProject.Domain.Entities.Villa", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -64,7 +64,7 @@ namespace VillaProject.Infrastructure.Migrations
                         new
                         {
                             ID = 1,
-                            CreatedDate = new DateTime(2024, 5, 18, 1, 22, 1, 534, DateTimeKind.Local).AddTicks(8267),
+                            CreatedDate = new DateTime(2024, 5, 19, 5, 55, 50, 112, DateTimeKind.Local).AddTicks(4637),
                             Description = "VillaNameOne and 4 rooms and bathroom",
                             ImageUrl = "Https://placeholder.com",
                             Occupancy = 4,
@@ -75,7 +75,7 @@ namespace VillaProject.Infrastructure.Migrations
                         new
                         {
                             ID = 2,
-                            CreatedDate = new DateTime(2024, 5, 18, 1, 22, 1, 534, DateTimeKind.Local).AddTicks(8317),
+                            CreatedDate = new DateTime(2024, 5, 19, 5, 55, 50, 112, DateTimeKind.Local).AddTicks(4684),
                             Description = "VillaNameTwo and 1 rooms",
                             ImageUrl = "Https://placeholder.com",
                             Occupancy = 1,
@@ -86,7 +86,7 @@ namespace VillaProject.Infrastructure.Migrations
                         new
                         {
                             ID = 3,
-                            CreatedDate = new DateTime(2024, 5, 18, 1, 22, 1, 534, DateTimeKind.Local).AddTicks(8323),
+                            CreatedDate = new DateTime(2024, 5, 19, 5, 55, 50, 112, DateTimeKind.Local).AddTicks(4691),
                             Description = "VillaNameThree and 2 rooms",
                             ImageUrl = "Https://placeholder.com",
                             Occupancy = 2,
@@ -94,6 +94,35 @@ namespace VillaProject.Infrastructure.Migrations
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             VillaName = "VillaNameTwo"
                         });
+                });
+
+            modelBuilder.Entity("VillaProject.Domain.Entities.VillaNumber", b =>
+                {
+                    b.Property<int>("VillaNumberID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MoreInformation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("VillaID")
+                        .HasColumnType("int");
+
+                    b.HasKey("VillaNumberID");
+
+                    b.HasIndex("VillaID");
+
+                    b.ToTable("VillaNumber");
+                });
+
+            modelBuilder.Entity("VillaProject.Domain.Entities.VillaNumber", b =>
+                {
+                    b.HasOne("VillaProject.Domain.Entities.Villa", "Villa")
+                        .WithMany()
+                        .HasForeignKey("VillaID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Villa");
                 });
 #pragma warning restore 612, 618
         }

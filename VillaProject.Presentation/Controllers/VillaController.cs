@@ -65,7 +65,7 @@ public class VillaController : Controller
         _logger.LogInformation("InSide Update Action Method");
         if (ModelState.IsValid)
         {
-            _applicationDBContext.Villas.Add(villa);
+            _applicationDBContext.Villas.Update(villa);
             _applicationDBContext.SaveChanges();
              TempData["success"] = "Entity Has Been Updated Successfully";
             return RedirectToAction("Index");
@@ -94,9 +94,10 @@ public class VillaController : Controller
             _logger.LogInformation("InSide Delete Action Method : Entity Has Been Deleted!");
             _applicationDBContext.Villas.Remove(result);
             _applicationDBContext.SaveChanges();
-             TempData["success"] = "Entity Has Been Deleted Successfully";
+            TempData["success"] = "Entity Has Been Deleted Successfully";
             return RedirectToAction("Index");
         }
+        TempData["error"] = "Entity Has Not Been Deleted Successfully";
         return View();
     }
 

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "VillaProject.Application/1.0.0": {
+        "runtime": {
+          "VillaProject.Application.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VillaProject.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
