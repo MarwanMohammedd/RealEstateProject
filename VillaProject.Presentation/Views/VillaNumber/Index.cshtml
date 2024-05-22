@@ -1,4 +1,4 @@
-@model IEnumerable<VillaProject.Domain.Entities.VillaNumber>
+@model IEnumerable<VillaNumber>
 
 <div class="w-100 card border-0 p-4">
     <h1>Villa Number</h1>
@@ -8,16 +8,16 @@
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>VillaID</th>
-                <th>VillaNumberID</th>
-                <th>MoreInformation</th>
+                <th>Villa</th>
+                <th>Villa Room ID</th>
+                <th>More Information</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var value in Model)
             {
                 <tr>
-                    <td>@value.VillaID</td>
+                    <td>@value.Villa.VillaName</td>
                     <td>@value.VillaNumberID</td>
                     <td>@value.MoreInformation</td>
                     <td>

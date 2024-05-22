@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using VillaProject.Domain.Entities;
+using VillaProject.Presentation.ViewModels;
 
 public class VillaNumberController : Controller
 {
@@ -14,30 +17,54 @@ public class VillaNumberController : Controller
     public IActionResult Index()
     {
         _logger.LogInformation("InSide Index Action Method");
-        var result = _applicationDBContext.VillaNumbers.ToList();
+        var result = _applicationDBContext.VillaNumbers.Include(opt => opt.Villa).ToList();
         return View(result);
     }
 
     public IActionResult Create()
     {
-        return View();
+        VillaNumberViewModel villaNumberViewModel = new VillaNumberViewModel()
+        {
+            VillaList = _applicationDBContext.Villas.Select(opt => new SelectListItem
+            {
+                Text = opt.VillaName,
+                Value = opt.ID.ToString()
+            }).ToList()
+        };
+        return View(villaNumberViewModel);
     }
 
     [HttpPost]
-    public IActionResult Create(VillaNumber villaNumber)
+    public IActionResult Create(VillaNumberViewModel villaNumberVM)
     {
         _logger.LogInformation("InSide Create Action Method");
+        bool roomIdExistance = _applicationDBContext.VillaNumbers.Any(opt => opt.VillaNumberID == villaNumberVM.VillaNumber!.VillaNumberID);
         ModelState.Remove("Villa");
-        if (ModelState.IsValid)
+        if (ModelState.IsValid && !roomIdExistance)
         {
-            _applicationDBContext.VillaNumbers.Add(villaNumber);
+            _applicationDBContext.VillaNumbers.Add(villaNumberVM.VillaNumber!);
             _applicationDBContext.SaveChanges();
             TempData["success"] = "Entity Has Been Created Successfully";
             _logger.LogInformation("InSide Create Action Method : Entity Has Been Created");
             return RedirectToAction("Index");
         }
+        if (roomIdExistance)
+        {
+            TempData["error"] = "Entity Is Already Created!";
+            villaNumberVM.VillaList = _applicationDBContext.Villas.Select(opt => new SelectListItem
+            {
+                Text = opt.VillaName,
+                Value = opt.ID.ToString()
+            }).ToList();
+            return View(villaNumberVM);
+        }
         TempData["error"] = "Entity Has Not Been Created Successfully";
-        return View();
+        villaNumberVM.VillaList = _applicationDBContext.Villas.Select(opt => new SelectListItem
+        {
+            Text = opt.VillaName,
+            Value = opt.ID.ToString()
+        }).ToList();
+        return View(villaNumberVM);
     }
 
     public IActionResult Update(int ID)

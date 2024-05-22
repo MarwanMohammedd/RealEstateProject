@@ -10,3 +10,4 @@ F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.dll
 F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\refint\VillaProject.Domain.dll
 F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.pdb
 F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\ref\VillaProject.Domain.dll
+F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.csproj.AssemblyReference.cache

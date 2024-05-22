@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 namespace VillaProject.Domain.Entities
 {
     /// <summary>
@@ -17,7 +17,8 @@ namespace VillaProject.Domain.Entities
         [ForeignKey("ID")]
         [Display(Name = "Villa ID")]
         public int VillaID { get; set; }
-        public Villa Villa { get; set; }
+        [ValidateNever]
+        public Villa Villa { get; set; } = null!;
         [Display(Name = "More Information")]
         public string? MoreInformation { get; set; }
     }
