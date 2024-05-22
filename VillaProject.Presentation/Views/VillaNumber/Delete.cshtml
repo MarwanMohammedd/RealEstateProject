@@ -1,27 +1,31 @@
-@model VillaNumber
+@model VillaNumberViewModel
 
-<div class = "h-100 d-flex align-items-center justify-content-center">
+<div class="h-100 d-flex align-items-center justify-content-center">
     <h1>Delete Villa Number</h1>
 </div>
 
 <div>
     <form method="post" class="row">
-        <input asp-for="VillaNumberID" hidden />
+        <input asp-for="@Model.VillaNumber!.VillaNumberID" hidden />
         <div class="p-3">
 
             <div class="form-floating py-1 col-12">
-                <input asp-for="VillaID" disabled="disabled" class="form-control border shadow" />
-                <label asp-for="VillaID" class="ms-2 text-dark"></label>
+                <select disabled asp-for="@Model.VillaNumber!.VillaID" asp-items="@Model.VillaList"
+                    class="form-select bordred shadow">
+                </select>
+                <label asp-for="@Model.VillaNumber!.VillaID" class="ms-2 text-dark"></label>
             </div>
 
             <div class="form-floating py-1 col-12">
-                <input asp-for="VillaNumberID"  disabled="disabled" class="form-control border shadow" />
-                <label asp-for="VillaNumberID" class="ms-2 text-dark"></label>
+                <input asp-for="@Model.VillaNumber!.VillaNumberID" disabled="disabled"
+                    class="form-control border shadow" />
+                <label asp-for="@Model.VillaNumber!.VillaNumberID" class="ms-2 text-dark"></label>
             </div>
 
             <div class="form-floating py-1 col-12">
-                <input asp-for="MoreInformation" disabled="disabled" class="form-control border shadow" />
-                <label asp-for="MoreInformation" class="ms-2 text-dark"></label>
+                <input asp-for="@Model.VillaNumber!.MoreInformation" disabled="disabled"
+                    class="form-control border shadow" />
+                <label asp-for="@Model.VillaNumber!.MoreInformation" class="ms-2 text-dark"></label>
             </div>
 
             <div class="row pt-2">

@@ -46,7 +46,7 @@ public class VillaNumberController : Controller
             _applicationDBContext.SaveChanges();
             TempData["success"] = "Entity Has Been Created Successfully";
             _logger.LogInformation("InSide Create Action Method : Entity Has Been Created");
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
         if (roomIdExistance)
         {
@@ -70,26 +70,34 @@ public class VillaNumberController : Controller
     public IActionResult Update(int ID)
     {
         _logger.LogInformation("InSide Update Action Method");
-        var result = _applicationDBContext.VillaNumbers.Find(ID);
-        if (result is null)
+
+        VillaNumberViewModel villaNumberViewModel = new()
+        {
+            VillaList = _applicationDBContext.Villas.Select(opt => new SelectListItem
+            {
+                Text = opt.VillaName,
+                Value = opt.ID.ToString()
+            }).ToList(),
+            VillaNumber = _applicationDBContext.VillaNumbers.Find(ID)
+        };
+        if (villaNumberViewModel.VillaNumber is null)
         {
             TempData["error"] = "Entity Has Not Been Updated Successfully";
             return NotFound("UnExpected");
         }
-        return View(result);
+        return View(villaNumberViewModel);
     }
 
     [HttpPost]
-    public IActionResult Update(VillaNumber villaNumber)
+    public IActionResult Update(VillaNumberViewModel villaNumberViewModel)
     {
-        ModelState.Remove("Villa");
         if (ModelState.IsValid)
         {
-            _applicationDBContext.VillaNumbers.Update(villaNumber);
+            _applicationDBContext.VillaNumbers.Update(villaNumberViewModel.VillaNumber!);
             _applicationDBContext.SaveChanges();
             TempData["success"] = "Entity Has Been Updated Successfully";
             _logger.LogInformation("InSide Update Action Method : Entity Has Been Updated");
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
         TempData["error"] = "Entity Has Not Been Updated Successfully";
         return View();
@@ -98,26 +106,35 @@ public class VillaNumberController : Controller
     public IActionResult Delete(int ID)
     {
         _logger.LogInformation("InSide Delete Action Method");
-        VillaNumber? result = _applicationDBContext.VillaNumbers.Find(ID);
-        if (result is null)
+        VillaNumberViewModel villaNumberViewModel = new()
+        {
+            VillaNumber = _applicationDBContext.VillaNumbers.Find(ID),
+            VillaList = _applicationDBContext.Villas.Select(opt => new SelectListItem
+            {
+                Text = opt.VillaName,
+                Value = opt.ID.ToString()
+            }).ToList(),
+        };
+        if (villaNumberViewModel is null)
         {
             TempData["error"] = "Entity Has Not Been Deleted Successfully";
             return NotFound("UnExpected");
         }
-        return View(result);
+        return View(villaNumberViewModel);
     }
 
     [HttpPost]
-    public IActionResult Delete(VillaNumber villaNumber)
+    public IActionResult Delete(VillaNumberViewModel villaNumberViewModel)
     {
-        var result = _applicationDBContext.VillaNumbers.FirstOrDefault(opt => opt.VillaNumberID == villaNumber.VillaNumberID);
+        var result = _applicationDBContext.VillaNumbers.FirstOrDefault(opt => opt.VillaNumberID == villaNumberViewModel.VillaNumber!.VillaNumberID);
+        
         if (result is not null)
         {
             _applicationDBContext.VillaNumbers.Remove(result);
             _applicationDBContext.SaveChanges();
             TempData["success"] = "Entity Has Been Deleted Successfully";
             _logger.LogInformation("InSide Delete Action Method : Entity Has Been Deleted");
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
         TempData["error"] = "Entity Has Not Been Deleted Successfully";
         return View();
