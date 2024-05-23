@@ -16,3 +16,5 @@ F:\VillaProject\VillaProject.Infrastructure\obj\Debug\net8.0\refint\VillaProject
 F:\VillaProject\VillaProject.Infrastructure\obj\Debug\net8.0\VillaProject.Infrastructure.pdb
 F:\VillaProject\VillaProject.Infrastructure\obj\Debug\net8.0\VillaProject.Infrastructure.genruntimeconfig.cache
 F:\VillaProject\VillaProject.Infrastructure\obj\Debug\net8.0\ref\VillaProject.Infrastructure.dll
+F:\VillaProject\VillaProject.Infrastructure\bin\Debug\net8.0\VillaProject.Application.dll
+F:\VillaProject\VillaProject.Infrastructure\bin\Debug\net8.0\VillaProject.Application.pdb

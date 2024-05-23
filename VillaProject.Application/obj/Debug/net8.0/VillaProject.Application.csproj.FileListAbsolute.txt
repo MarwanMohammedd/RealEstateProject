@@ -10,3 +10,7 @@ F:\VillaProject\VillaProject.Application\obj\Debug\net8.0\VillaProject.Applicati
 F:\VillaProject\VillaProject.Application\obj\Debug\net8.0\refint\VillaProject.Application.dll
 F:\VillaProject\VillaProject.Application\obj\Debug\net8.0\VillaProject.Application.pdb
 F:\VillaProject\VillaProject.Application\obj\Debug\net8.0\ref\VillaProject.Application.dll
+F:\VillaProject\VillaProject.Application\bin\Debug\net8.0\VillaProject.Domain.dll
+F:\VillaProject\VillaProject.Application\bin\Debug\net8.0\VillaProject.Domain.pdb
+F:\VillaProject\VillaProject.Application\obj\Debug\net8.0\VillaProject.Application.csproj.AssemblyReference.cache
+F:\VillaProject\VillaProject.Application\obj\Debug\net8.0\VillaProject.Application.csproj.CopyComplete

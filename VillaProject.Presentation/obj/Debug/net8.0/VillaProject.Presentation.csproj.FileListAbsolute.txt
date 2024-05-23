@@ -146,3 +146,5 @@ F:\VillaProject\VillaProject.Presentation\bin\Debug\net8.0\Microsoft.CodeAnalysi
 F:\VillaProject\VillaProject.Presentation\bin\Debug\net8.0\Newtonsoft.Json.dll
 F:\VillaProject\VillaProject.Presentation\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 F:\VillaProject\VillaProject.Presentation\obj\Debug\net8.0\VillaProject.Presentation.MvcApplicationPartsAssemblyInfo.cs
+F:\VillaProject\VillaProject.Presentation\bin\Debug\net8.0\VillaProject.Application.dll
+F:\VillaProject\VillaProject.Presentation\bin\Debug\net8.0\VillaProject.Application.pdb

@@ -8,10 +8,10 @@ using VillaProject.Domain.Entities;
 public class VillaController : Controller
 {
     private readonly ILogger<VillaController> _logger;
-    private readonly ApplicationDBContext _applicationDBContext;
-    public VillaController(ApplicationDBContext _applicationDBContext, ILogger<VillaController> _logger)
+    private readonly IUnitOfWork _unitOfWork;
+    public VillaController(IUnitOfWork _unitOfWork, ILogger<VillaController> _logger)
     {
-        this._applicationDBContext = _applicationDBContext;
+        this._unitOfWork = _unitOfWork;
         this._logger = _logger;
     }
 
@@ -19,7 +19,7 @@ public class VillaController : Controller
     public IActionResult Index()
     {
         _logger.LogInformation("InSide Index Action Method : Show All Villa Entity");
-        var result = _applicationDBContext.Villas.ToList();
+        var result = _unitOfWork.Villas.GetAll();
         return View(result);
     }
     public IActionResult Create()
@@ -39,8 +39,8 @@ public class VillaController : Controller
         if (ModelState.IsValid)
         {
             _logger.LogInformation("InSide Create Action Method : Create New Villa Entity");
-            _applicationDBContext.Villas.Add(villa);
-            _applicationDBContext.SaveChanges();
+            _unitOfWork.Villas.Add(villa);
+            _unitOfWork.Save();
             TempData["success"] = "Entity Has Been Created Successfully";
             return RedirectToAction(nameof(Index));
         }
@@ -50,7 +50,7 @@ public class VillaController : Controller
     public IActionResult Update(int ID)
     {
         _logger.LogInformation("InSide Update Action Method");
-        var result = _applicationDBContext.Villas.Find(ID);
+        var result = _unitOfWork.Villas.GetElementByID(ID:ID);
         if (result is null)
         {
             TempData["error"] = "Entity Has Not Been Updated Successfully";
@@ -65,8 +65,8 @@ public class VillaController : Controller
         _logger.LogInformation("InSide Update Action Method");
         if (ModelState.IsValid)
         {
-            _applicationDBContext.Villas.Update(villa);
-            _applicationDBContext.SaveChanges();
+            _unitOfWork.Villas.Update(villa);
+            _unitOfWork.Save();
              TempData["success"] = "Entity Has Been Updated Successfully";
             return RedirectToAction(nameof(Index));
         }
@@ -75,7 +75,7 @@ public class VillaController : Controller
 
     public IActionResult Delete(int ID)
     {
-        Villa? result = _applicationDBContext.Villas.FirstOrDefault(objectVilla => objectVilla.ID == ID);
+        Villa? result = _unitOfWork.Villas.GetElementByID(objectVilla => objectVilla.ID == ID);
         if (result is null)
         {
             _logger.LogInformation("InSide Delete Action Method : ID Not Exist");
@@ -88,12 +88,12 @@ public class VillaController : Controller
     [HttpPost]
     public IActionResult Delete(Villa villa)
     {
-        Villa? result = _applicationDBContext.Villas.FirstOrDefault(objectVilla => objectVilla.ID == villa.ID);
+        Villa? result = _unitOfWork.Villas.GetElementByID(objectVilla => objectVilla.ID == villa.ID);
         if (result is not null)
         {
             _logger.LogInformation("InSide Delete Action Method : Entity Has Been Deleted!");
-            _applicationDBContext.Villas.Remove(result);
-            _applicationDBContext.SaveChanges();
+            _unitOfWork.Villas.Delete(result);
+            _unitOfWork.Save();
             TempData["success"] = "Entity Has Been Deleted Successfully";
             return RedirectToAction(nameof(Index));
         }

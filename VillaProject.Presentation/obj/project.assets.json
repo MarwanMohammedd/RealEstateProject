@@ -3640,6 +3640,19 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "VillaProject.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "VillaProject.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VillaProject.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VillaProject.Application.dll": {}
+        }
+      },
       "VillaProject.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -3657,7 +3670,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "VillaProject.Domain": "1.0.0",
+          "VillaProject.Application": "1.0.0",
           "microsoft.entityframeworkcore.sqlserver": "8.0.5"
         },
         "compile": {
@@ -10173,6 +10186,11 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "VillaProject.Application/1.0.0": {
+      "type": "project",
+      "path": "../VillaProject.Application/VillaProject.Application.csproj",
+      "msbuildProject": "../VillaProject.Application/VillaProject.Application.csproj"
     },
     "VillaProject.Domain/1.0.0": {
       "type": "project",
