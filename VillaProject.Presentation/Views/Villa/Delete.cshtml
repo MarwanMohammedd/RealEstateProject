@@ -1,47 +1,52 @@
 @model Villa
 
 
-<div class = "h-100 d-flex align-items-center justify-content-center">
+<div class="h-100 d-flex align-items-center justify-content-center">
     <h1>Delete Villa</h1>
 </div>
 <div>
-    <form method="post" class="row">
+    <form method="post" class="row" enctype="multipart/form-data">
         <input asp-for="ID" hidden />
-        <div class="p-3">
-            <div class="form-floating py-1 col-12">
-                <input asp-for="VillaName" disabled="disabled" class="form-control border shadow" />
-                <label asp-for="VillaName" class="ms-2 text-dark"></label>
-            </div>
-
-            <div class="form-floating py-1 col-12">
-                <input asp-for="Description"  disabled="disabled" class="form-control border shadow" />
-                <label asp-for="Description" class="ms-2 text-dark"></label>
-            </div>
-
-
-            <div class="form-floating py-1 col-12">
-                <input asp-for="Price" disabled="disabled" class="form-control border shadow" />
-                <label asp-for="Price" class="ms-2 text-dark"></label>
-            </div>
-
-
-            <div class="form-floating py-1 col-12">
-                <input asp-for="Occupancy" disabled="disabled" class="form-control border shadow" />
-                <label asp-for="Occupancy" class="ms-2 text-dark"></label>
-            </div>
-
-            <div class="form-floating py-1 col-12">
-                <input asp-for="ImageUrl" disabled="disabled" class="form-control border shadow " />
-                <label asp-for="ImageUrl" class="ms-2 text-dark"></label>
-            </div>
-
-            <div class="row pt-2">
-                <div class="col-6 col-md-3">
-                    <button type="submit" class="btn btn-danger w-100">Delete</button>
+        <div class="col-10">
+            <div class="p-3">
+                <div class="form-floating py-1 col-12">
+                    <input asp-for="VillaName" disabled="disabled" class="form-control border shadow" />
+                    <label asp-for="VillaName" class="ms-2 text-dark"></label>
                 </div>
-                <div class="col-6 col-md-3">
-                    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary w-100">Cancel</a>
+
+                <div class="form-floating py-1 col-12">
+                    <input asp-for="Description" disabled="disabled" class="form-control border shadow" />
+                    <label asp-for="Description" class="ms-2 text-dark"></label>
                 </div>
+
+
+                <div class="form-floating py-1 col-12">
+                    <input asp-for="Price" disabled="disabled" class="form-control border shadow" />
+                    <label asp-for="Price" class="ms-2 text-dark"></label>
+                </div>
+
+
+                <div class="form-floating py-1 col-12">
+                    <input asp-for="Occupancy" disabled="disabled" class="form-control border shadow" />
+                    <label asp-for="Occupancy" class="ms-2 text-dark"></label>
+                </div>
+
+                <div class="form-floating py-1 col-12">
+                    <input asp-for="ImageUrl" disabled="disabled" class="form-control border shadow " />
+                    <label asp-for="ImageUrl" class="ms-2 text-dark"></label>
+                </div>
+
+                <div class="row pt-2">
+                    <div class="col-6 col-md-3">
+                        <button type="submit" class="btn btn-danger w-100">Delete</button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary w-100">Cancel</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <img src="@Model.ImageUrl" width="100%" style="border-radius:5px; border:1px solid #bbb9b9" />
             </div>
     </form>
 </div>

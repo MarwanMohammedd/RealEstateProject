@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RDPoG1UEctMl6Yzt/4JSWaZm8I+Fq7lqD48GT8pHKy8=",
+  "Hash": "6+oATA+/0akwBm1LkPaJTO5i/LSNgJixeSVviKjGSP8=",
   "Source": "VillaProject.Presentation",
   "BasePath": "_content/VillaProject.Presentation",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "F:\\VillaProject\\VillaProject.Presentation\\wwwroot\\Images\\sam.jpeg",
+      "SourceId": "VillaProject.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\VillaProject\\VillaProject.Presentation\\wwwroot\\",
+      "BasePath": "_content/VillaProject.Presentation",
+      "RelativePath": "Images/sam.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\sam.jpeg"
     },
     {
       "Identity": "F:\\VillaProject\\VillaProject.Presentation\\wwwroot\\js\\site.js",

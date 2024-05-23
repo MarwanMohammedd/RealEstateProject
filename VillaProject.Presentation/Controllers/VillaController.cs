@@ -1,6 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using VillaProject.Domain.Entities;
 /// <summary>
 /// Controller for Villa Entity.
@@ -9,10 +7,12 @@ public class VillaController : Controller
 {
     private readonly ILogger<VillaController> _logger;
     private readonly IUnitOfWork _unitOfWork;
-    public VillaController(IUnitOfWork _unitOfWork, ILogger<VillaController> _logger)
+    private readonly IWebHostEnvironment _webHostEnvironment;
+    public VillaController(IUnitOfWork _unitOfWork, ILogger<VillaController> _logger, IWebHostEnvironment _webHostEnvironment)
     {
         this._unitOfWork = _unitOfWork;
         this._logger = _logger;
+        this._webHostEnvironment = _webHostEnvironment;
     }
 
     //Defualt EndPoint Of Villa Controller
@@ -38,6 +38,18 @@ public class VillaController : Controller
         }
         if (ModelState.IsValid)
         {
+            if (villa.Image is not null)
+            {
+                string filaPath = villa.Image.FileName.Split('.')[0] + Path.GetExtension(villa.Image.FileName);
+                string imagePath = Path.Combine(_webHostEnvironment.WebRootPath, @"Images\");
+                using var fileStream = new FileStream(Path.Combine(imagePath, filaPath), FileMode.Create);
+                villa.Image.CopyTo(fileStream);
+                villa.ImageUrl = @"\Images\" + filaPath;
+            }
+            else
+            {
+                villa.ImageUrl = "https://placehold.co/600x400";
+            }
             _logger.LogInformation("InSide Create Action Method : Create New Villa Entity");
             _unitOfWork.Villas.Add(villa);
             _unitOfWork.Save();
@@ -50,7 +62,7 @@ public class VillaController : Controller
     public IActionResult Update(int ID)
     {
         _logger.LogInformation("InSide Update Action Method");
-        var result = _unitOfWork.Villas.GetElementByID(ID:ID);
+        var result = _unitOfWork.Villas.GetElementByID(ID: ID);
         if (result is null)
         {
             TempData["error"] = "Entity Has Not Been Updated Successfully";
@@ -65,9 +77,25 @@ public class VillaController : Controller
         _logger.LogInformation("InSide Update Action Method");
         if (ModelState.IsValid)
         {
+            if (villa.Image is not null)
+            {
+                string filaPath = villa.Image?.FileName.Split('.')[0] + Path.GetExtension(villa.Image?.FileName);
+                string imagePath = Path.Combine(_webHostEnvironment.WebRootPath, @"Images");
+                if (!string.IsNullOrEmpty(villa.ImageUrl))
+                {
+                    string oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, villa.ImageUrl.TrimStart('\\'));
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
+                using var fileStream = new FileStream(Path.Combine(imagePath, filaPath), FileMode.Create);
+                villa.Image?.CopyTo(fileStream);
+                villa.ImageUrl = @"\Images\" + filaPath;
+            }
             _unitOfWork.Villas.Update(villa);
             _unitOfWork.Save();
-             TempData["success"] = "Entity Has Been Updated Successfully";
+            TempData["success"] = "Entity Has Been Updated Successfully";
             return RedirectToAction(nameof(Index));
         }
         return View();
@@ -91,6 +119,14 @@ public class VillaController : Controller
         Villa? result = _unitOfWork.Villas.GetElementByID(objectVilla => objectVilla.ID == villa.ID);
         if (result is not null)
         {
+            if (!string.IsNullOrEmpty(result.ImageUrl))
+            {
+                string oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, result.ImageUrl.TrimStart('\\'));
+                if (System.IO.File.Exists(oldImagePath))
+                {
+                    System.IO.File.Delete(oldImagePath);
+                }
+            }
             _logger.LogInformation("InSide Delete Action Method : Entity Has Been Deleted!");
             _unitOfWork.Villas.Delete(result);
             _unitOfWork.Save();
