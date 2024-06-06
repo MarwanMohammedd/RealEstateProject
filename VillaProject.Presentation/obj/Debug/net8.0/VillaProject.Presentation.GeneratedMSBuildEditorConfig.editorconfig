@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0eVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/VillaProject/VillaProject.Presentation/Views/Amenity/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0eVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/VillaProject/VillaProject.Presentation/Views/Amenity/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0eVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -103,12 +103,39 @@ public class AmenityController : Controller
 
     public IActionResult Delete(int ID)
     {
-        return View();
+        _logger.LogInformation("InSide Delete Action Method");
+        bool isExist = _unitOfWork.Amenitys.CheckExistance(opt => opt.ID == ID);
+        if (isExist is false)
+        {
+            TempData["error"] = "Entity Has Not Been Updated Successfully";
+            return NotFound();
+        }
+        AmenityViewModel amenityViewModel = new()
+        {
+            Amenity = _unitOfWork.Amenitys.GetElementByID(ID: ID),
+            AmenityList = _unitOfWork.Villas.GetAll().Select(opt => new SelectListItem
+            {
+                Value = opt.ID.ToString(),
+                Text = opt.VillaName,
+            })
+        };
+        return View(amenityViewModel);
     }
 
     [HttpPost]
-    public IActionResult Delete(Villa villa)
+    public IActionResult Delete(AmenityViewModel amenityViewModel)
     {
+       var result = _unitOfWork.Amenitys.GetElementByID(opt => opt.ID == amenityViewModel.Amenity!.ID);
+
+        if (result is not null)
+        {
+            _unitOfWork.Amenitys.Delete(result);
+            _unitOfWork.Save();
+            TempData["success"] = "Entity Has Been Deleted Successfully";
+            _logger.LogInformation("InSide Delete Action Method : Entity Has Been Deleted");
+            return RedirectToAction(nameof(Index));
+        }
+        TempData["error"] = "Entity Has Not Been Deleted!!";
         return View();
     }
 }
