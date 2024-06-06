@@ -5,15 +5,15 @@ using VillaProject.Infrastructure.Repository;
 public class UnitOfWork : IUnitOfWork
 {
     private readonly ApplicationDBContext _applicationBDContext;
-
     public IGenericRepository<Villa> Villas { get; private set; }
     public IGenericRepository<VillaNumber> VillaNumbers { get; private set; }
-
+    public IGenericRepository<Amenity> Amenitys { get; private set; }
     public UnitOfWork(ApplicationDBContext _applicationBDContext)
     {
         this._applicationBDContext = _applicationBDContext;
         Villas = new GenericRepository<Villa>(this._applicationBDContext);
         VillaNumbers = new GenericRepository<VillaNumber>(this._applicationBDContext);
+        Amenitys = new GenericRepository<Amenity>(this._applicationBDContext);
     }
     public void Dispose()
     {

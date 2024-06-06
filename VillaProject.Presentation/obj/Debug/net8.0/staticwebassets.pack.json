@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\VillaProject.Presentation.bundle.scp.css"
     },
     {
-      "Id": "F:\\VillaProject\\VillaProject.Presentation\\wwwroot\\Images\\sam.jpeg",
-      "PackagePath": "staticwebassets\\Images\\sam.jpeg"
-    },
-    {
       "Id": "F:\\VillaProject\\VillaProject.Presentation\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
