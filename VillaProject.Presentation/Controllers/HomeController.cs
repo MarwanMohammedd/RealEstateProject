@@ -8,13 +8,15 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> _logger)
     {
-        _logger = logger;
+        this._logger = _logger;
     }
+
 
     public IActionResult Index()
     {
+
         return View();
     }
 
