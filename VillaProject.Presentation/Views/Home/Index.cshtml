@@ -64,21 +64,20 @@
             </div>
         </div>
     </div>
-
+   @foreach (var villa in Model.VillaList){
     <div id="VillaList">
-        @foreach(var villa in Model.VillaList){
-        <div class="row px-lg-5 m-lg-4 m-sm-0 px-sm-0" style="--bs-gutter-x:0">
+            <div class="row px-lg-5 m-lg-4 m-sm-0 px-sm-0" style="--bs-gutter-x:0">
                 <div class="p-4 col-md-12 col-lg-6">
                     <div class="row" style="border-radius: 5px; border: 1px solid #000">
                         <div class="col-4 p-2">
-                            <img class="d-black w-100" style="border-radius: 5px;" src="https://placehold.co/600x400">
+                            <img class="d-black w-100" style="border-radius: 5px;" src=@villa.ImageUrl>
                         </div>
                         <div class="col-8">
                             <div class="d-flex justify-content-between">
                                 <p class="card-title text-warning" style="font-size: xx-large;">@villa.VillaName</p>
                                 <div class="pt-2">
                                     <button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModel-@(11)">Details</button>
+                                        data-bs-target="#exampleModel-@(@villa.ID)">Details</button>
                                 </div>
                             </div>
                             <p class="card-text">@villa.Description</p>
@@ -94,7 +93,7 @@
                         </div>
                         <div class="col-4">
                             <span class="text-warning float-ed font-weight-bold pt-1" style="font-size: 25px;"> USD
-                                <span style="border-bottom: 1px solid #022042;">$@Math.Round(@villa.Price ,2)
+                                <span style="border-bottom: 1px solid #022042;">@villa.Price.ToString("c")
                                 </span>
                             </span>
                         </div>
@@ -102,24 +101,24 @@
                 </div>
             </div>
         </div>
-
-        <div class="modal fade" id="exampleModel-@(11)" tabindex="-1" aria-labelledby="exmapleModelLabel"
+        <div class="modal fade" id="exampleModel-@(villa.ID)" tabindex="-1" aria-labelledby="exmapleModelLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-x1" style="border: 1px solid #aaa; border-radius: 7px;">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-3 text-success" id="exmapleModelLabel">Villa Details</h1>
+                        <h1 class="modal-title fs-3 text-success" id="exmapleModelLabel">Villa Details - @villa.VillaName
+                        </h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body m-0"> Villa Details</div>
+                    <div class="modal-body m-0">
+                        <partial name="_VillaDetails" model="@villa"/>
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
-                
             </div>
-            
         </div>
         }
-    </form>
-    </div>
+</form>
+</div>
