@@ -1,5 +1,6 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using VillaProject.Application.Repository;
 
 namespace VillaProject.Infrastructure.Repository
@@ -17,9 +18,12 @@ namespace VillaProject.Infrastructure.Repository
             _applicationDBContext.Set<T>().Add(entity);
         }
 
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> GetAll(string? includeProperties = null)
         {
-            return _applicationDBContext.Set<T>().ToList();
+            if(includeProperties.IsNullOrEmpty()){
+                return _applicationDBContext.Set<T>().ToList();
+            }
+            return _applicationDBContext.Set<T>().Include<T>(includeProperties!).ToList();
         }
 
         public T GetElementByID(System.Linq.Expressions.Expression<Func<T, bool>>? Predicate = null, int? ID = null)

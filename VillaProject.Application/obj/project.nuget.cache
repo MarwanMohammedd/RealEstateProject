@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6DVgglhMIoGQ+hr4vavUGTYWgfScqhDWILl9FXQYQbcq9iRtvcxrF2wiHZUMLb8kMqGtDWfDm+WCy1vz4zAg1g==",
+  "dgSpecHash": "rAY10S+tZ7pckMzp4EE/5JyfwWwbRZjKuurintlJunXuiwQlAqVR3Bo3RsKjbbjqU2sZbDXyVz/P4AnYTGJHpw==",
   "success": true,
-  "projectFilePath": "F:\\VillaProject\\VillaProject.Application\\VillaProject.Application.csproj",
+  "projectFilePath": "F:\\RealEstateProject\\VillaProject.Application\\VillaProject.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marwan Rabie\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\Marwan Rabie\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

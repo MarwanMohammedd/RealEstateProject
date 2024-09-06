@@ -4,7 +4,8 @@ namespace VillaProject.Application.Repository
 {
     public interface IGenericRepository<T> where T : class
     {
-        IEnumerable<T> GetAll();
+        IEnumerable<T> GetAll(string? includeProperties = null);
+        
         T GetElementByID(Expression<Func<T, bool>>? Predicate = null, int? ID = null);
         void Add(T entity);
         void Update(T entity);

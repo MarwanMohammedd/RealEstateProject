@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JVQeywwLqphmbdoPgBsgv98Um1jNZoQOy2AHH3Xeg+KWs9lHXRQDWKfZbd5DxhhffJ+S52sNsPLcS9RrPYE6qQ==",
+  "dgSpecHash": "zYRKr32se+U/DlvuZwf9QqvWgoX2x6WrvEQu7TIx5AqYiBlO/zpvHeg0sVjTqEJKGrfDDdIikBWIdOIbFucXLg==",
   "success": true,
-  "projectFilePath": "F:\\VillaProject\\VillaProject.Infrastructure\\VillaProject.Infrastructure.csproj",
+  "projectFilePath": "F:\\RealEstateProject\\VillaProject.Infrastructure\\VillaProject.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marwan Rabie\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Marwan Rabie\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

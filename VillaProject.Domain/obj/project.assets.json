@@ -8006,11 +8006,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\VillaProject\\VillaProject.Domain\\VillaProject.Domain.csproj",
+      "projectUniqueName": "F:\\RealEstateProject\\VillaProject.Domain\\VillaProject.Domain.csproj",
       "projectName": "VillaProject.Domain",
-      "projectPath": "F:\\VillaProject\\VillaProject.Domain\\VillaProject.Domain.csproj",
+      "projectPath": "F:\\RealEstateProject\\VillaProject.Domain\\VillaProject.Domain.csproj",
       "packagesPath": "C:\\Users\\Marwan Rabie\\.nuget\\packages\\",
-      "outputPath": "F:\\VillaProject\\VillaProject.Domain\\obj\\",
+      "outputPath": "F:\\RealEstateProject\\VillaProject.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Marwan Rabie\\AppData\\Roaming\\NuGet\\NuGet.Config",

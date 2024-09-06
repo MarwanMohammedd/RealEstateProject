@@ -11,3 +11,16 @@ F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\refint\VillaProject.Domain.
 F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.pdb
 F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\ref\VillaProject.Domain.dll
 F:\VillaProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.csproj.AssemblyReference.cache
+F:\RealEstateProject\VillaProject.Domain\bin\Debug\net8.0\VillaProject.Domain.deps.json
+F:\RealEstateProject\VillaProject.Domain\bin\Debug\net8.0\VillaProject.Domain.dll
+F:\RealEstateProject\VillaProject.Domain\bin\Debug\net8.0\VillaProject.Domain.pdb
+F:\RealEstateProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.csproj.AssemblyReference.cache
+F:\RealEstateProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\RealEstateProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.AssemblyInfoInputs.cache
+F:\RealEstateProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.AssemblyInfo.cs
+F:\RealEstateProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.csproj.CoreCompileInputs.cache
+F:\RealEstateProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.sourcelink.json
+F:\RealEstateProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.dll
+F:\RealEstateProject\VillaProject.Domain\obj\Debug\net8.0\refint\VillaProject.Domain.dll
+F:\RealEstateProject\VillaProject.Domain\obj\Debug\net8.0\VillaProject.Domain.pdb
+F:\RealEstateProject\VillaProject.Domain\obj\Debug\net8.0\ref\VillaProject.Domain.dll

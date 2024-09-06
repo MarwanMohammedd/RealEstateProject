@@ -10216,11 +10216,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\VillaProject\\VillaProject.Presentation\\VillaProject.Presentation.csproj",
+      "projectUniqueName": "F:\\RealEstateProject\\VillaProject.Presentation\\VillaProject.Presentation.csproj",
       "projectName": "VillaProject.Presentation",
-      "projectPath": "F:\\VillaProject\\VillaProject.Presentation\\VillaProject.Presentation.csproj",
+      "projectPath": "F:\\RealEstateProject\\VillaProject.Presentation\\VillaProject.Presentation.csproj",
       "packagesPath": "C:\\Users\\Marwan Rabie\\.nuget\\packages\\",
-      "outputPath": "F:\\VillaProject\\VillaProject.Presentation\\obj\\",
+      "outputPath": "F:\\RealEstateProject\\VillaProject.Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Marwan Rabie\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10237,8 +10237,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "F:\\VillaProject\\VillaProject.Infrastructure\\VillaProject.Infrastructure.csproj": {
-              "projectPath": "F:\\VillaProject\\VillaProject.Infrastructure\\VillaProject.Infrastructure.csproj"
+            "F:\\RealEstateProject\\VillaProject.Infrastructure\\VillaProject.Infrastructure.csproj": {
+              "projectPath": "F:\\RealEstateProject\\VillaProject.Infrastructure\\VillaProject.Infrastructure.csproj"
             }
           }
         }

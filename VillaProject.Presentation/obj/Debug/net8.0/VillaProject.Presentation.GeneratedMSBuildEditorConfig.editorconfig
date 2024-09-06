@@ -9,99 +9,99 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VillaProject.Presentation
 build_property.RootNamespace = VillaProject.Presentation
-build_property.ProjectDir = F:\VillaProject\VillaProject.Presentation\
+build_property.ProjectDir = F:\RealEstateProject\VillaProject.Presentation\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\VillaProject\VillaProject.Presentation
+build_property.MSBuildProjectDirectory = F:\RealEstateProject\VillaProject.Presentation
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Amenity/Create.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Amenity/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0eVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Amenity/Delete.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Amenity/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0eVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Amenity/Index.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Amenity/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0eVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Amenity/Update.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Amenity/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW1lbml0eVxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Home/Index.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Home/Privacy.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Shared/Error.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Shared/_NotificationPartial.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Shared/_NotificationPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Shared/_ValidationScriptsPartial.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/VillaNumber/Create.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/VillaNumber/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFOdW1iZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/VillaNumber/Delete.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/VillaNumber/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFOdW1iZXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/VillaNumber/Index.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/VillaNumber/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFOdW1iZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/VillaNumber/UnExpected.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/VillaNumber/UnExpected.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFOdW1iZXJcVW5FeHBlY3RlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/VillaNumber/Update.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/VillaNumber/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFOdW1iZXJcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Villa/CaptureUnExpected.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Villa/CaptureUnExpected.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFcQ2FwdHVyZVVuRXhwZWN0ZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Villa/Create.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Villa/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Villa/Delete.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Villa/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Villa/Index.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Villa/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Villa/Update.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Villa/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlsbGFcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/_ViewImports.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/_ViewStart.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/VillaProject/VillaProject.Presentation/Views/Shared/_Layout.cshtml]
+[F:/RealEstateProject/VillaProject.Presentation/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ujia74ytm7

@@ -7,17 +7,22 @@ namespace VillaProject.Presentation.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> _logger)
+    private readonly IUnitOfWork _unitOfWork;
+    public HomeController(ILogger<HomeController> _logger ,IUnitOfWork _unitOfWork)
     {
         this._logger = _logger;
+        this._unitOfWork = _unitOfWork; 
     }
 
 
     public IActionResult Index()
     {
-
-        return View();
+        HomeViewModel homeViewModel = new(){
+            VillaList = _unitOfWork.Villas.GetAll(includeProperties: "Amenities"),
+            CheckInDate = DateOnly.FromDateTime(DateTime.Now),
+            NumberOfNights = 1
+        };
+        return View(homeViewModel);
     }
 
     public IActionResult Privacy()
