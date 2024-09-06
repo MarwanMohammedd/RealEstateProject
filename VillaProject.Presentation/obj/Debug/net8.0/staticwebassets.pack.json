@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\Images\\slide2.jpeg"
     },
     {
+      "Id": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\Images\\slide3.jpeg",
+      "PackagePath": "staticwebassets\\Images\\slide3.jpeg"
+    },
+    {
       "Id": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
