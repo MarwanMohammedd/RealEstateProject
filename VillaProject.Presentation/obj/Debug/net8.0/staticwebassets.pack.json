@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\VillaProject.Presentation.bundle.scp.css"
     },
     {
+      "Id": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\Images\\slide1.jpg",
+      "PackagePath": "staticwebassets\\Images\\slide1.jpg"
+    },
+    {
+      "Id": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\Images\\slide2.jpeg",
+      "PackagePath": "staticwebassets\\Images\\slide2.jpeg"
+    },
+    {
       "Id": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
