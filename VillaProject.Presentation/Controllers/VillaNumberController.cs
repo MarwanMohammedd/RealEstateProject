@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using VillaProject.Presentation.ViewModels;
 
+[Authorize]
 public class VillaNumberController : Controller
 {
     private readonly IUnitOfWork _unitOfWork;

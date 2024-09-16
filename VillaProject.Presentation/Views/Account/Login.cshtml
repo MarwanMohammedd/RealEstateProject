@@ -1,0 +1,48 @@
+@model LogInViewModel
+<div class="container pt-5">
+    <div class="card shadow border">
+        <div class="card-header bg-success bg-gradient ml-0 py-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="py-2 text-black">LogIn</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <section>
+                        <form action="post">
+                            <input asp-for="RedirecURL" hidden/>
+                            <div asp-asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" aria-required="true" asp-for="Email">
+                                <label class="form-label" asp-for="Email"></label>
+                                <span asp-asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" aria-required="true" asp-for="Password">
+                                <label class="form-label" asp-for="Password"></label>
+                                <span asp-asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="checkbox mb-3">
+                                <input class="form-check-input" asp-for="RememberMe" />
+                                <label class="form-label" asp-for="RememberMe"></label>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-100 btn btn-lg btn-outline-success">Log In</button>
+                            </div>
+                            <div class="d-flex justify-content-between pt-2">
+                                <a asp-action="ForgetPassword">Forget Your Password?</a>
+                                <a asp-action="SignUp" asp-route-retrunUrl="@Model.RedirecURL">Register As A New User</a>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>s
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

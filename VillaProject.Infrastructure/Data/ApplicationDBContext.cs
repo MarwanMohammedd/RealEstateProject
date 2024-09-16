@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using VillaProject.Domain.Entities;
 
-public class ApplicationDBContext : IdentityDbContext
+public class ApplicationDBContext : IdentityDbContext<ApplicationUser> // Specify that IdentityDBCOntext work with ApplicationUser class 
 {
     public DbSet<Villa> Villas { get; set; }
     public DbSet<VillaNumber> VillaNumbers { get; set; }

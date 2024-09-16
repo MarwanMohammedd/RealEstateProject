@@ -1,10 +1,13 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using VillaProject.Application.Utility;
 using VillaProject.Domain.Entities;
 using VillaProject.Presentation.ViewModels;
 /// <summary>
 /// Controller for Ametiy Entity.
 /// </summary>
+[Authorize(Roles =SD.Role_Admin)]
 public class AmenityController : Controller
 {
     private readonly ILogger<VillaController> _logger;

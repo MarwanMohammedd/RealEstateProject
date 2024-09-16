@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using VillaProject.Domain.Entities;
 /// <summary>
 /// Controller for Villa Entity.
 /// </summary>
+[Authorize]
 public class VillaController : Controller
 {
     private readonly ILogger<VillaController> _logger;
