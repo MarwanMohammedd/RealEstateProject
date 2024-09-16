@@ -102,6 +102,14 @@
             "Microsoft.AspNetCore.Mvc": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "microsoft.aspnetcore.identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "microsoft.aspnetcore.identity.entityframeworkcore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
             }
           },
           "imports": [
@@ -164,15 +172,23 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "microsoft.aspnetcore.identity.entityframeworkcore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "microsoft.entityframeworkcore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "microsoft.entityframeworkcore.sqlserver": {
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.8, )"
             },
             "microsoft.entityframeworkcore.tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[8.0.8, )"
             }
           },
           "imports": [

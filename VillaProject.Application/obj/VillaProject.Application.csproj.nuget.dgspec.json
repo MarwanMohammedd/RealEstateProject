@@ -102,6 +102,14 @@
             "Microsoft.AspNetCore.Mvc": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "microsoft.aspnetcore.identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "microsoft.aspnetcore.identity.entityframeworkcore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
             }
           },
           "imports": [

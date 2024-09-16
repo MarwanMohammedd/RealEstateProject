@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="microsoft.aspnetcore.identity.entityframeworkcore" Version="8.0.8" />
+    <PackageReference Include="microsoft.aspnetcore.identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
   </ItemGroup>
 

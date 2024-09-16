@@ -1,6 +1,6 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using VillaProject.Application.Repository;
-using VillaProject.Infrastructure.Repository;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +9,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDBContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("VillaConnectionString"))
 );
+builder.Services.AddIdentity<IdentityUser,IdentityRole>()
+.AddEntityFrameworkStores<ApplicationDBContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped<IUnitOfWork , UnitOfWork>();
 
 var app = builder.Build();

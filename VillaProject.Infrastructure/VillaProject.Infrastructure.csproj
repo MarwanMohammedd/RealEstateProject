@@ -7,8 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="8.0.5" />
-    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="8.0.5">
+    <PackageReference Include="microsoft.aspnetcore.identity.entityframeworkcore" Version="8.0.8" />
+    <PackageReference Include="microsoft.entityframeworkcore" Version="8.0.8" />
+    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="8.0.8" />
+    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="8.0.8">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>

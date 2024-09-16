@@ -298,3 +298,10 @@ F:\RealEstateProject\VillaProject.Presentation\obj\Debug\net8.0\refint\VillaProj
 F:\RealEstateProject\VillaProject.Presentation\obj\Debug\net8.0\VillaProject.Presentation.pdb
 F:\RealEstateProject\VillaProject.Presentation\obj\Debug\net8.0\VillaProject.Presentation.genruntimeconfig.cache
 F:\RealEstateProject\VillaProject.Presentation\obj\Debug\net8.0\ref\VillaProject.Presentation.dll
+F:\RealEstateProject\VillaProject.Presentation\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\RealEstateProject\VillaProject.Presentation\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\RealEstateProject\VillaProject.Presentation\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\RealEstateProject\VillaProject.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+F:\RealEstateProject\VillaProject.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+F:\RealEstateProject\VillaProject.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+F:\RealEstateProject\VillaProject.Presentation\bin\Debug\net8.0\System.Text.Json.dll
