@@ -1,9 +1,11 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using VillaProject.Presentation.Models;
 
 namespace VillaProject.Presentation.Controllers;
 
+[AllowAnonymous]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -13,8 +15,7 @@ public class HomeController : Controller
         this._logger = _logger;
         this._unitOfWork = _unitOfWork; 
     }
-
-
+    
     public IActionResult Index()
     {
         HomeViewModel homeViewModel = new(){
@@ -24,12 +25,7 @@ public class HomeController : Controller
         };
         return View(homeViewModel);
     }
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
+    
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

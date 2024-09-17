@@ -139,7 +139,7 @@ public class AccountController : Controller
             }
             else
             {
-                ModelState.AddModelError(String.Empty, "Invalid Login Attempt. ");
+                ModelState.AddModelError(String.Empty, "Invalid Login Attempt.");
             }
         }
 

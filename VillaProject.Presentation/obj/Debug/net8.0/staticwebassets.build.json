@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1R6Ef840eeh759h3lrYBrneLY6diobgJM0GQXzfq3Dw=",
+  "Hash": "HIkeita0zlVJhjWmq1eEKGjoMqj1yPFr5DC6U8yPiCc=",
   "Source": "VillaProject.Presentation",
   "BasePath": "_content/VillaProject.Presentation",
   "Mode": "Default",
@@ -93,6 +93,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\Images\\AccessDenied.jpeg",
+      "SourceId": "VillaProject.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\",
+      "BasePath": "_content/VillaProject.Presentation",
+      "RelativePath": "Images/AccessDenied.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\AccessDenied.jpeg"
+    },
+    {
       "Identity": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\Images\\myimage.jpeg",
       "SourceId": "VillaProject.Presentation",
       "SourceType": "Discovered",
@@ -110,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\myimage.jpeg"
+    },
+    {
+      "Identity": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\Images\\Screenshot 2024-08-10 213117.png",
+      "SourceId": "VillaProject.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\",
+      "BasePath": "_content/VillaProject.Presentation",
+      "RelativePath": "Images/Screenshot 2024-08-10 213117.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Screenshot 2024-08-10 213117.png"
     },
     {
       "Identity": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\Images\\Screenshot 2024-08-11 102916.png",

@@ -1,3 +1,37 @@
-<div class="container pt-2">
-    <img src="\Images\AccessDenied.jpeg"  width="100%" alt="..">
-</div>
+    <style>
+        .access-denied-page {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa; /* Light background */
+        }
+        .access-denied-container {
+            text-align: center;
+            background: #fff; /* White background for the message box */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        .access-denied-container h1 {
+            font-size: 3rem;
+            color: #dc3545; /* Bootstrap's danger color */
+        }
+        .access-denied-container p {
+            font-size: 1.2rem;
+            color: #6c757d; /* Bootstrap's muted color */
+        }
+        .btn-back {
+            margin-top: 20px;
+            color: #fff;
+            background-color: #007bff; /* Bootstrap's primary color */
+        }
+    </style>
+
+    <div class="access-denied-page">
+        <div class="access-denied-container">
+            <h1>Access Denied</h1>
+            <p>You do not have permission to view this page.</p>
+            <a href="/" class="btn btn-back">Go Back Home</a>
+        </div>
+    </div>

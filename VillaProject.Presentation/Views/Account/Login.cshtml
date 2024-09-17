@@ -1,48 +1,87 @@
 @model LogInViewModel
 <div class="container pt-5">
     <div class="card shadow border">
-        <div class="card-header bg-success bg-gradient ml-0 py-4">
+        <div class="card-header bg-success bg-gradient text-white py-4">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class="py-2 text-black">LogIn</h2>
+                    <h2 class="py-2">Log In</h2>
                 </div>
             </div>
         </div>
         <div class="card-body p-4">
-            <div class="row">
-                <div class="col-md-12">
-                    <section>
-                        <form action="post">
-                            <input asp-for="RedirecURL" hidden/>
-                            <div asp-asp-validation-summary="ModelOnly" class="text-danger"></div>
-                            <div class="form-floating mb-3">
-                                <input class="form-control" aria-required="true" asp-for="Email">
-                                <label class="form-label" asp-for="Email"></label>
-                                <span asp-asp-validation-for="Email" class="text-danger"></span>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input class="form-control" aria-required="true" asp-for="Password">
-                                <label class="form-label" asp-for="Password"></label>
-                                <span asp-asp-validation-for="Password" class="text-danger"></span>
-                            </div>
-                            <div class="checkbox mb-3">
-                                <input class="form-check-input" asp-for="RememberMe" />
-                                <label class="form-label" asp-for="RememberMe"></label>
-                            </div>
-                            <div>
-                                <button type="submit" class="w-100 btn btn-lg btn-outline-success">Log In</button>
-                            </div>
-                            <div class="d-flex justify-content-between pt-2">
-                                <a asp-action="ForgetPassword">Forget Your Password?</a>
-                                <a asp-action="SignUp" asp-route-retrunUrl="@Model.RedirecURL">Register As A New User</a>
-                            </div>
-                        </form>
-                    </section>
+            <form method="post">
+                <input asp-for="RedirecURL" hidden />
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" aria-required="true" asp-for="Email" />
+                    <label class="form-label" asp-for="Email"></label>
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
-            </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" aria-required="true" asp-for="Password" />
+                    <label class="form-label" asp-for="Password"></label>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" asp-for="RememberMe" />
+                    <label class="form-check-label" asp-for="RememberMe"></label>
+                </div>
+                <button type="submit" class="w-100 btn btn-success btn-lg">Log In</button>
+                <div class="d-flex justify-content-between pt-3">
+                    <a asp-action="ForgetPassword" class="text-success">Forget Your Password?</a>
+                    <a asp-action="SignUp" asp-route-retrunUrl="@Model.RedirecURL" class="text-success">Register As A New User</a>
+                </div>
+            </form>
         </div>
     </div>
-</div>s
+</div>
+
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+
+<!-- Custom Styles -->
+<style>
+    .card {
+        border-radius: 0.5rem; /* Rounded corners */
+    }
+
+    .card-header {
+        border-bottom: 1px solid #ddd; /* Subtle border at the bottom */
+    }
+
+    .form-control {
+        border-radius: 0.25rem; /* Rounded input fields */
+    }
+
+    .form-floating > label {
+        padding-left: 0.75rem; /* Adjust label position */
+    }
+
+    .form-check-input {
+        margin-top: 0.3rem; /* Align checkbox input */
+    }
+
+    .btn-outline-success {
+        border-color: #28a745; /* Success color */
+        color: #28a745;
+        font-weight: bold;
+    }
+
+    .btn-outline-success:hover {
+        background-color: #28a745; /* Success color */
+        color: #fff;
+    }
+
+    .text-success {
+        color: #28a745; /* Success color for links */
+    }
+
+    .text-success:hover {
+        text-decoration: underline; /* Underline on hover for links */
+    }
+
+    .container {
+        max-width: 600px; /* Set a max-width for better alignment */
+    }
+</style>

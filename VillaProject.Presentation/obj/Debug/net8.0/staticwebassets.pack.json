@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\VillaProject.Presentation.bundle.scp.css"
     },
     {
+      "Id": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\Images\\AccessDenied.jpeg",
+      "PackagePath": "staticwebassets\\Images\\AccessDenied.jpeg"
+    },
+    {
+      "Id": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\Images\\Screenshot 2024-08-10 213117.png",
+      "PackagePath": "staticwebassets\\Images\\Screenshot 2024-08-10 213117.png"
+    },
+    {
       "Id": "F:\\RealEstateProject\\VillaProject.Presentation\\wwwroot\\Images\\Screenshot 2024-08-11 102916.png",
       "PackagePath": "staticwebassets\\Images\\Screenshot 2024-08-11 102916.png"
     },

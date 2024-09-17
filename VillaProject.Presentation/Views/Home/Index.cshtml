@@ -1,29 +1,51 @@
 ﻿@model HomeViewModel
-<div>
-    <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="\Images\slide1.jpg" class="d-block w-100" alt="....">
-            </div>
-            <div class="carousel-item">
-                <img src="\Images\slide2.jpeg" class="d-block w-100" alt="....">
-            </div>
-            <div class="carousel-item">
-                <img src="\Images\slide3.jpeg" class="d-block w-100" alt="....">
+<div id="carouselExampleIndicators" class="carousel slide">
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <!-- Carousel Inner -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-image-wrapper">
+                <img src="/Images/slide1.jpg" class="d-block w-100 carousel-image" alt="Slide 1">
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="text-center caption-content">
+                        <h5>Slide 1 Title</h5>
+                        <p>Description for slide 1.</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="\Images\slide3.jpeg" class="d-block w-100" alt="....">
+            <div class="carousel-image-wrapper">
+                <img src="/Images/slide2.jpeg" class="d-block w-100 carousel-image" alt="Slide 2">
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="text-center caption-content">
+                        <h5>Slide 2 Title</h5>
+                        <p>Description for slide 2.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-image-wrapper">
+                <img src="/Images/slide3.jpeg" class="d-block w-100 carousel-image" alt="Slide 3">
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="text-center caption-content">
+                        <h5>Slide 3 Title</h5>
+                        <p>Description for slide 3.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- Carousel Controls -->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -31,19 +53,68 @@
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
         data-bs-slide="next">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+<!-- Custom Styles with Animations -->
+<style>
+    .carousel-image-wrapper {
+        position: relative;
+    }
+
+    .carousel-image {
+        transition: transform 0.5s ease, filter 0.5s ease;
+        /* Smooth transition for hover effects */
+    }
+
+    .carousel-image:hover {
+        transform: scale(1.05);
+        /* Slight zoom effect on hover */
+        filter: brightness(0.9);
+        /* Slightly darken image on hover */
+    }
+
+    .carousel-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Center the caption */
+        background: rgba(0, 0, 0, 0.5);
+        /* Dark semi-transparent background */
+        color: #fff;
+        /* White text color */
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        width: 80%;
+        /* Set the width of the caption */
+        max-width: 600px;
+        /* Set a maximum width for larger screens */
+    }
+
+    .caption-content {
+        display: inline-block;
+        /* Ensure the caption content is centered */
+        width: 100%;
+    }
+
+    .carousel-item:hover .carousel-caption {
+        opacity: 1;
+        /* Show caption on hover */
+    }
+</style>
 <form method="post" style="background-color: aliceblue;">
     <div class="row p-0 mx-0 py-4">
         <div class="col-12 col-md-5 offset-md-1 pl-2 pr-2 pr-md-0">
-            <div class="form-group">
+            <div class="form-group ">
                 <label>Check In Date</label>
                 <input asp-for="CheckInDate" type="date" class="form-control" />
             </div>
         </div>
-
         <div class="col-8 col-md-3 pl-2 pr-2">
             <div class="form-group">
                 <label>No. of Nights</label>
@@ -55,7 +126,6 @@
                 </select>
             </div>
         </div>
-
         <div class="col-4 col-md-2 pt-4 pr-2">
             <div class="form-group">
                 <button type="button" class="btn btn-success btn-block">
@@ -64,61 +134,119 @@
             </div>
         </div>
     </div>
-   @foreach (var villa in Model.VillaList){
-    <div id="VillaList">
-            <div class="row px-lg-5 m-lg-4 m-sm-0 px-sm-0" style="--bs-gutter-x:0">
-                <div class="p-4 col-md-12 col-lg-6">
-                    <div class="row" style="border-radius: 5px; border: 1px solid #000">
-                        <div class="col-4 p-2">
-                            <img class="d-black w-100" style="border-radius: 5px;" src=@villa.ImageUrl>
-                        </div>
-                        <div class="col-8">
-                            <div class="d-flex justify-content-between">
-                                <p class="card-title text-warning" style="font-size: xx-large;">@villa.VillaName</p>
-                                <div class="pt-2">
-                                    <button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModel-@(@villa.ID)">Details</button>
+    <div class="container">
+        <div class="row">
+            <!-- Card 1 -->
+            @foreach (var villa in Model.VillaList)
+            {
+                <div class="col-md-6 mb-4"> <!-- This ensures two cards per row on medium and larger screens -->
+                    <div class="card shadow-sm bg-white rounded"
+                        style="border: 1px solid #ddd; height: 100%; position: relative;">
+                        <!-- Villa Image Section -->
+                        <img src="@villa.ImageUrl" alt="@villa.VillaName" class="card-img-top"
+                            style="height: 200px; object-fit: cover;">
+                        <!-- Villa Info Section -->
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title text-warning" style="font-size: 1.5rem;">@villa.VillaName</h5>
+                                <button type="button" class="btn btn-outline-success btn-lg px-4" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModel-@(@villa.ID)">
+                                    Details
+                                </button>
+                            </div>
+                            <p class="card-text text-truncate" style="font-size: 1.2rem;">@villa.Description</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3" style="font-size: 1.1rem;">
+                                <span class="text-muted">Max Occupancy: @villa.Occupancy</span>
+                            </div>
+                            <!-- Villa Size Info -->
+                            <div class="mt-3 mb-3" style="font-size: 1.2rem;">
+                                <span class="text-muted">Villa Size: SIZE sqft</span>
+                            </div>
+                            <!-- Price Information Wrapper -->
+                            <div class="position-relative">
+                                <div class="position-absolute bottom-0 end-0 mb-3 me-3 text-warning font-weight-bold"
+                                    style="font-size: 1.4rem;">
+                                    USD @villa.Price.ToString("c")
                                 </div>
                             </div>
-                            <p class="card-text">@villa.Description</p>
                         </div>
-                        <div class="col-12">
-                            <div class="row pd-3 pt-2">
-                                <div class="col-4"> <a class="btn btn-success form-control btn-block">Book</a></div>
+                        <!-- Book Button -->
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-success btn-lg px-5 w-100">Book</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Structure -->
+                <div class="modal fade" id="exampleModel-@(villa.ID)" tabindex="-1" aria-labelledby="exampleModelLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- Centered and large modal -->
+                        <div class="modal-content border-0 rounded-3 shadow-lg">
+                            <div class="modal-header d-flex justify-content-between align-items-center">
+                                <h1 class="modal-title fs-4 text-success text-center flex-grow-1" id="exampleModelLabel">
+                                    Villa Details - @villa.VillaName</h1>
+                                <button type="button" class="btn-close btn-close-lg" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body p-4">
+                                <partial name="_VillaDetails" model="@villa" />
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-danger w-100"
+                                    data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <span class="">Max Occupancy : @villa.Occupancy </span><br />
-                            <span class="pt-1">Villa Size : 11 sqft </span><br />
-                        </div>
-                        <div class="col-4">
-                            <span class="text-warning float-ed font-weight-bold pt-1" style="font-size: 25px;"> USD
-                                <span style="border-bottom: 1px solid #022042;">@villa.Price.ToString("c")
-                                </span>
-                            </span>
-                        </div>
                     </div>
                 </div>
-            </div>
+                <!-- Custom Styles -->
+                <style>
+                    /* Modal backdrop with blur */
+                    .modal-backdrop {
+                        background-color: rgba(0, 0, 0, 0.5);
+                        /* Slight dark overlay */
+                    }
+
+                    .modal-backdrop.show {
+                        backdrop-filter: blur(8px);
+                        /* Apply blur effect to backdrop */
+                    }
+
+                    /* Optional custom styles */
+                    .modal-content {
+                        border: 1px solid #ddd;
+                        /* Lighter border for a cleaner look */
+                        border-radius: 0.5rem;
+                        /* Rounded corners */
+                    }
+
+                    .modal-body {
+                        padding: 2rem;
+                        /* Padding for content */
+                    }
+
+                    .modal-footer .btn-outline-danger {
+                        border-color: #dc3545;
+                        /* Red border color */
+                        color: #dc3545;
+                        /* Red text color */
+                    }
+
+                    .modal-footer .btn-outline-danger:hover {
+                        background-color: #dc3545;
+                        /* Red background on hover */
+                        color: #fff;
+                        /* White text on hover */
+                    }
+
+                    .btn-close-lg {
+                        width: 2.5rem;
+                        /* Wider close button */
+                        height: 2.5rem;
+                        font-size: 1.5rem;
+                        /* Larger icon */
+                    }
+                </style>
+            }
         </div>
-        <div class="modal fade" id="exampleModel-@(villa.ID)" tabindex="-1" aria-labelledby="exmapleModelLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-x1" style="border: 1px solid #aaa; border-radius: 7px;">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-3 text-success" id="exmapleModelLabel">Villa Details - @villa.VillaName
-                        </h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body m-0">
-                        <partial name="_VillaDetails" model="@villa"/>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        }
+    </div>
 </form>
 </div>

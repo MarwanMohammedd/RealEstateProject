@@ -1,57 +1,102 @@
 @model SignUpViewModel
 <div class="container pt-5">
     <div class="card shadow border">
-        <div class="card-header bg-success bg-gradient ml-0 py-4">
+        <div class="card-header bg-success bg-gradient text-white py-4">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class="py-2 text-black">Register</h2>
+                    <h2 class="py-2">Register</h2>
                 </div>
             </div>
         </div>
         <div class="card-body p-4">
-            <div class="row pt-3">
-                <div class="col-md-12">
-                    <form action="post">
-                        <input asp-for="RedirecURL" hidden/>
-                        <div class="form-floating mb-3 col-md-12">
-                            <input class="form-control" aria-required="true" asp-for="Email">
-                            <label class="ms-2 text-muted" asp-for="Email"></label>
-                            <span class="text-danger" asp-validation-for="Email"></span>
-                        </div>
-                        <div class="form-floating mb-3 col-md-12">
-                            <input class="form-control" asp-for="Name" />
-                            <label class="ms-2 text-muted" asp-for="Name"></label>
-                            <span class="text-danger" asp-validation-for="Name"></span>
-                        </div>
-                        <div class="form-floating mb-3 col-md-12">
-                            <input class="form-control" asp-for="PhoneNumber" />
-                            <label class="ms-2 text-muted" asp-for="PhoneNumber"></label>
-                            
-                        </div>
-                        <div class="form-floating mb-3 col-md-12">
-                            <input class="form-control" asp-for="Password"/>
-                            <label class="ms-2 text-muted" asp-for="Password"></label>
-                            <span class="text-danger" asp-validation-for="Password"></span>
-                        </div>
-                        <div class="form-floating mb-3 col-md-12">
-                            <input class="form-control" asp-for="ConfirmPassword"/>
-                            <label class="ms-2 text-muted" asp-for="ConfirmPassword"></label>
-                        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
-                        </div>
-                        <div class="form-floating mb-3 col-md-12">
-                            <select class="form-select" asp-for="Role" asp-items="@Model.RoleList">
-                                <option disabled selected>--Select Role--</option>
-                            </select>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="w-100 btn btn-lg btn-outline-success">Register</button>
-                        </div>
-                    </form>
+            <form method="post">
+                <input asp-for="RedirecURL" hidden />
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" aria-required="true" asp-for="Email" />
+                    <label class="form-label" asp-for="Email"></label>
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
-            </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" asp-for="Name" />
+                    <label class="form-label" asp-for="Name"></label>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" asp-for="PhoneNumber" />
+                    <label class="form-label" asp-for="PhoneNumber"></label>
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" asp-for="Password" />
+                    <label class="form-label" asp-for="Password"></label>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" asp-for="ConfirmPassword" />
+                    <label class="form-label" asp-for="ConfirmPassword"></label>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" asp-for="Role" asp-items="@Model.RoleList">
+                        <option disabled selected>--Select Role--</option>
+                    </select>
+                    <label class="form-label" asp-for="Role"></label>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="w-100 btn btn-success btn-lg">Register</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
+
 @section Scripts {
     <partial name="_ValidationScriptsPartial"/>
 }
+
+<!-- Custom Styles -->
+<style>
+    .card {
+        border-radius: 0.5rem; /* Rounded corners */
+    }
+
+    .card-header {
+        border-bottom: 1px solid #ddd; /* Subtle border at the bottom */
+    }
+
+    .form-control, .form-select {
+        border-radius: 0.25rem; /* Rounded input fields */
+    }
+
+    .form-floating > label {
+        padding-left: 0.75rem; /* Adjust label position */
+    }
+
+    .form-floating > .form-control {
+        border-radius: 0.25rem; /* Rounded input fields */
+    }
+
+    .btn-outline-success {
+        border-color: #28a745; /* Success color */
+        color: #28a745;
+        font-weight: bold;
+    }
+
+    .btn-outline-success:hover {
+        background-color: #28a745; /* Success color */
+        color: #fff;
+    }
+
+    .text-success {
+        color: #28a745; /* Success color for text */
+    }
+
+    .text-success:hover {
+        text-decoration: underline; /* Underline on hover for links */
+    }
+
+    .container {
+        max-width: 600px; /* Set a max-width for better alignment */
+    }
+</style>
